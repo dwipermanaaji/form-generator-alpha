@@ -56,10 +56,13 @@ class OptionForm extends Component
     {
         $this->emitTo('form-builder.list-form-element','updateList',$this->activeListKey,$this->activeListData);
     }
+    
     public function sendEmitResetList()
     {
         $this->activeListKey = null;
         $this->activeListData = null;        
         $this->emit('resetActiveList');
     }
+
+
 }

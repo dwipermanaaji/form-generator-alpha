@@ -85,6 +85,8 @@ class ListFormElement extends Component
     public function refleshSetActiveList()
     {
         $key = $this->activeListKey;
-        $this->emit('setActiveList', $key, Crypt::encrypt($this->list[$key]));
+        if($key !== null){
+            $this->emit('setActiveList', $key, Crypt::encrypt($this->list[$key]));
+        }
     }
 }

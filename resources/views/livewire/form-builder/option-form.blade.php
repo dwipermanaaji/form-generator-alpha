@@ -23,6 +23,11 @@
                 <label for="">Value</label>
                 <input type="text" class="form-control" wire:model.lazy="activeListData.value">
             </div>
+            <div class="col-3 form-group">
+                <label for="">Colspan</label>
+                <input type="number" min="1" max="12" class="form-control" wire:model.lazy="activeListData.colForm">
+                <small class="form-text text-muted">*Set 1 to 12</small>
+            </div>
             <div class="col-12 form-group p-0">
                 <div class="col-sm-2">Validation</div>
                 <div class="col-sm-10">

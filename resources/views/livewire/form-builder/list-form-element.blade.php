@@ -32,3 +32,5 @@
         print_r($list);
     @endphp   
 </div>
+
+
