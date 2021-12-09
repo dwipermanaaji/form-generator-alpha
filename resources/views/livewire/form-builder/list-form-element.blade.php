@@ -1,4 +1,5 @@
 <div class="formBody row" >
+
     @foreach ($list as $key=> $item)
         <div 
             wire:click.stop="$emit('setActiveList',{{$key}},'{{ \Crypt::encrypt($list[$key]) }}')" 

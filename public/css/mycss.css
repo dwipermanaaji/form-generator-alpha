@@ -18,7 +18,12 @@ span.error{
   width:35%;
   top: 0;
   bottom:0;
-  overflow-y:auto;
+  overflow-y: auto;
+}
+
+.optionForm .bodyOption .row{
+
+  overflow:none;
 }
 
 

@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\FormBuilder;
 
 use Livewire\Component;
-
+use Crypt;
 class ListFormElement extends Component
 {
     protected $listeners = [
@@ -12,6 +12,7 @@ class ListFormElement extends Component
         'addNewFormElement'=>'addNewFormElement',
         'updateList'=>'updateList',
     ];
+
     public $activeListKey = null;
     
     public $list = [
@@ -40,6 +41,9 @@ class ListFormElement extends Component
         $this->activeListKey = null;
         $this->activeListData = null; 
     }
+    
+ 
+
     public function addNewFormElement($data)
     {
         array_push($this->list,$data);
@@ -59,6 +63,8 @@ class ListFormElement extends Component
         $data = $this->list[$key-1];
         $this->list[$key-1] = $this->list[$key];
         $this->list[$key] = $data; 
+        $this->refleshSetActiveList();
+
     }
     public function toDown($key)
     {
@@ -72,5 +78,13 @@ class ListFormElement extends Component
         $data = $this->list[$key+1];
         $this->list[$key+1] = $this->list[$key];
         $this->list[$key] = $data;  
+        $this->refleshSetActiveList();
+
+    }
+
+    public function refleshSetActiveList()
+    {
+        $key = $this->activeListKey;
+        $this->emit('setActiveList', $key, Crypt::encrypt($this->list[$key]));
     }
 }
