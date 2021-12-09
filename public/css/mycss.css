@@ -1,0 +1,89 @@
+body{
+  background-color: #f3f3fe;
+}
+span.error{
+  color:red;
+}
+
+.optionForm{
+  position: relative;
+  padding:0;
+}
+
+.optionForm .bodyOption{
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 4px 4px rgb(87 100 126 / 21%);
+  right: 0;
+  width:35%;
+  top: 0;
+  bottom:0;
+  overflow-y:auto;
+}
+
+
+.mainForm{
+  background-color: white;
+  box-shadow: 0 4px 4px rgb(87 100 126 / 21%);
+  border-radius: 10px;
+  padding:0;
+  margin-bottom: 100px
+}
+.mainForm .formHeader{
+  min-height: 130px;
+  padding:0 60px;
+  border-bottom: 1px solid #f3f3fe;
+}
+.mainForm .formHeader .header{
+  font-size:2em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.mainForm .formHeader .subHeader{
+  font-size:1em;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.mainForm .formBody{
+  padding:20px 60px;
+}
+
+.mainForm .formBody .formAdd{
+  min-height: 100px;
+}
+.mainForm .formBody .formAdd a{
+  width: 100%;
+  border-radius: 10px;
+  border:1px solid rgb(87 100 126 / 21%);
+  color:rgb(87 100 126 / 21%);
+}
+
+.mainForm .formBody .formInput{
+  cursor: all-scroll;
+  padding-bottom:10px;
+  position: relative;
+}
+
+.mainForm .formBody .formInput.active{
+  border:2px solid #0293e2;
+  border-radius: 4px;
+}
+.mainForm .formBody .formInput .required::after{
+  content:'*';
+  color: red;
+  display: inline-block;
+  text-indent: 9px;
+}
+
+
+.mainForm .formBody .formInput .optionFormInpout{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom:0;
+}
+
+.mainForm .formBody .formInput .optionFormInpout button{
+  font-size:9px;
+  padding: 0;
+}

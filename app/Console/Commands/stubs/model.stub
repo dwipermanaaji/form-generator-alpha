@@ -1,0 +1,19 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Resource;
+
+
+class DummyClass extends Resource
+{
+    protected $table = '{{table}}';
+
+    protected $fillable = {{fillable}};
+
+    //use SoftDeletes;
+    //protected $dates = ['deleted_at'];
+
+}

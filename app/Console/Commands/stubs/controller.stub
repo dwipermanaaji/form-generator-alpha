@@ -1,0 +1,33 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyRootNamespaceHttp\Requests;
+use DummyRootNamespaceHttp\Controllers\Controller;
+use App\Http\Controllers\BaseComponent\BaseController;
+
+class DummyClass  extends BaseController
+{
+    protected $f_model = '{{modelName}}';
+    protected $title = '{{title}}';
+    protected $route = '{{route-name}}';    
+    {{auth_name}}
+    
+    {{customPage}}
+
+    public $datatableColumn = [
+      {{rowsdatatableColumn}}['data' => 'action', 'title' => 'Opsi', 'orderable' => false, 'searchable' => false, 'width' => '130px'],
+    ];
+
+
+    public function _setForm($method)
+    {
+        $forms = [
+            {{forms}}
+        ];
+        return $forms;
+    }
+  
+{{example}}
+    
+}
