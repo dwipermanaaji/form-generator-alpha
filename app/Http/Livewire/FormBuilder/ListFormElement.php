@@ -50,14 +50,27 @@ class ListFormElement extends Component
     }
     public function toUp($key)
     {
+        if($key === $this->activeListKey){
+            $this->activeListKey = $key-1;
+        }else if($key-1 === $this->activeListKey){
+            $this->activeListKey = $key;
+        }
+
         $data = $this->list[$key-1];
         $this->list[$key-1] = $this->list[$key];
-        $this->list[$key] = $data;     
+        $this->list[$key] = $data; 
     }
     public function toDown($key)
     {
+        if($key === $this->activeListKey){
+            $this->activeListKey = $key+1;
+        }else if($key+1 === $this->activeListKey){
+            $this->activeListKey = $key;
+        }
+
+
         $data = $this->list[$key+1];
         $this->list[$key+1] = $this->list[$key];
-        $this->list[$key] = $data;       
+        $this->list[$key] = $data;  
     }
 }
